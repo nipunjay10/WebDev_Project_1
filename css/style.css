@@ -1,17 +1,15 @@
 /* COLOR PALETTE */
 
 :root {
-  --bg: #f9f7f3;            /* off-white background */
-  --bg-card: #ffffff;       /* white for cards */
-  --text: #010101;          /* main text color */
-  --text-muted: #56585c;    /* lighter gray for secondary text */
-  --accent-blue: #54a9d7;   /* light blue */
+  --bg: #f9f7f3; /* off-white background */
+  --bg-card: #ffffff; /* white for cards */
+  --text: #010101; /* main text color */
+  --text-muted: #56585c; /* lighter gray for secondary text */
+  --accent-blue: #54a9d7; /* light blue */
   --accent-blue-dark: #044181; /* darker blue */
-  --accent-brown: #8b6f4e;  /* warm brown */
-  --border: #e6e1d8;        /* subtle border color */
+  --accent-brown: #8b6f4e; /* warm brown */
+  --border: #e6e1d8; /* subtle border color */
 }
-
-
 
 /* MAIN STYLE */
 body {
@@ -114,9 +112,9 @@ main {
 /* about me section */
 .about {
   /* keep text from stretching too wide on big screens */
-  max-width: 800px; 
+  max-width: 800px;
   /* center the section horizontally */
-  margin: 2rem auto 5rem; 
+  margin: 2rem auto 5rem;
   padding: 0 2rem;
 }
 
@@ -185,7 +183,6 @@ main {
   color: var(--accent-brown);
   text-decoration: underline;
 }
-
 
 /* -------------------------- */
 /* PAGES */
@@ -409,8 +406,6 @@ main {
   margin-bottom: 1.1rem;
   color: var(--text);
 }
-
-
 
 /*--------------------------*/
 /* Filter Buttons for Bucket List */

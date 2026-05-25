@@ -1,14 +1,14 @@
-// BUCKET LIST PAGE JAVASCRIPT 
+// BUCKET LIST PAGE JAVASCRIPT
 
-// when we click a filter, only the cards iwth the matching data type should be visible 
+// when we click a filter, only the cards iwth the matching data type should be visible
 
 // 1. get all the filter buttons and cards
-const filterButtons = document.querySelectorAll('.filter-btn');
-const cards = document.querySelectorAll('.card');
+const filterButtons = document.querySelectorAll(".filter-btn");
+const cards = document.querySelectorAll(".card");
 
-// 2. loop through each button and add click handler 
+// 2. loop through each button and add click handler
 filterButtons.forEach((button) => {
-    button.addEventListener("click", () => {
+  button.addEventListener("click", () => {
     // read which continent this button represents
     const selectedContinent = button.dataset.continent;
 
