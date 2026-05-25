@@ -1,232 +1,52 @@
-/* ============================================
-   Global tokens — minimal modern w/ blue + brown
-   ============================================ */
-:root {
-  --bg: #f9f7f3;
-  --bg-alt: #ffffff;
-  --text: #1f2630;
-  --text-muted: #5c6675;
-  --accent-blue: #6ea8c7;
-  --accent-blue-dark: #4a8bb0;
-  --accent-brown: #8b6f4e;
-  --accent-brown-dark: #6e5639;
-  --border: #e6e1d8;
-  --shadow: 0 6px 24px rgba(31, 38, 48, 0.06);
-  --shadow-lg: 0 12px 36px rgba(31, 38, 48, 0.1);
-  --radius: 12px;
-  --transition: 0.25s ease;
-}
-
-/* ============================================
-   Base
-   ============================================ */
-* {
-  box-sizing: border-box;
-}
-
+/* reset some default browser spacing */
 body {
-  font-family: "Inter", system-ui, -apple-system, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  font-weight: 400;
-  line-height: 1.65;
   margin: 0;
+  font-family: Arial, sans-serif;
+  color: #222;
+  background-color: #f9f7f3;
 }
 
-h1,
-h2,
-h3 {
-  font-family: "Playfair Display", Georgia, serif;
-  color: var(--text);
-  letter-spacing: -0.01em;
-}
-
-a {
-  color: var(--accent-blue-dark);
-  text-decoration: none;
-  transition: color var(--transition);
-}
-
-a:hover {
-  color: var(--accent-brown-dark);
-}
-
-/* ============================================
-   Nav
-   ============================================ */
-.site-nav {
-  background: var(--bg-alt);
-  border-bottom: 1px solid var(--border);
-  padding: 1rem 0;
-}
-
-.brand-text {
-  font-family: "Playfair Display", serif;
-  font-weight: 700;
-  font-size: 1.35rem;
-  color: var(--text) !important;
-}
-
-.site-nav .nav-link {
-  color: var(--text-muted) !important;
-  font-weight: 500;
-  margin: 0 0.5rem;
-  position: relative;
-  transition: color var(--transition);
-}
-
-.site-nav .nav-link:hover,
-.site-nav .nav-link.active {
-  color: var(--accent-blue-dark) !important;
-}
-
-.site-nav .nav-link.active::after {
-  content: "";
-  position: absolute;
-  left: 0.5rem;
-  right: 0.5rem;
-  bottom: -4px;
-  height: 2px;
-  background: var(--accent-blue);
-}
-
-/* ============================================
-   Hero
-   ============================================ */
-.hero {
-  padding: 6rem 0 4rem;
-  background: linear-gradient(180deg, var(--bg) 0%, var(--bg-alt) 100%);
-}
-
-.hero-inner {
-  max-width: 720px;
-}
-
-.hero-eyebrow {
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  font-size: 0.85rem;
-  color: var(--accent-brown);
-  margin-bottom: 0.75rem;
-  font-weight: 600;
-}
-
-.hero-name {
-  font-size: clamp(2.5rem, 6vw, 4rem);
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-}
-
-.hero-title {
-  font-size: 1.25rem;
-  color: var(--text-muted);
-  margin-bottom: 1.5rem;
-  font-weight: 500;
-}
-
-.hero-blurb {
-  font-size: 1.1rem;
-  color: var(--text);
-  margin-bottom: 2rem;
-  max-width: 620px;
-}
-
-.hero-ctas {
+/* nav bar */
+.navbar {
+  background-color: white;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #ddd;
   display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* ============================================
-   Buttons
-   ============================================ */
-.btn-primary-custom {
-  background: var(--accent-blue-dark);
-  color: white;
-  padding: 0.7rem 1.6rem;
-  border-radius: var(--radius);
-  font-weight: 600;
-  border: none;
-  transition: background var(--transition), transform var(--transition);
-}
-
-.btn-primary-custom:hover {
-  background: var(--accent-brown-dark);
-  color: white;
-  transform: translateY(-2px);
-}
-
-.btn-outline-custom {
-  background: transparent;
-  color: var(--text);
-  padding: 0.7rem 1.6rem;
-  border-radius: var(--radius);
-  font-weight: 600;
-  border: 2px solid var(--border);
-  transition: all var(--transition);
-}
-
-.btn-outline-custom:hover {
-  border-color: var(--accent-brown);
-  color: var(--accent-brown-dark);
-  transform: translateY(-2px);
-}
-
-/* ============================================
-   Teaser cards (home page)
-   ============================================ */
-.teasers {
-  padding: 4rem 0 6rem;
-}
-
-.teaser-card {
-  display: block;
-  background: var(--bg-alt);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 2rem;
-  height: 100%;
-  color: var(--text);
+/* the Nipun Jayakumar button on the left */
+.nav-logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #222;
   text-decoration: none;
-  transition: transform var(--transition), box-shadow var(--transition),
-    border-color var(--transition);
 }
 
-.teaser-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--accent-blue);
-  color: var(--text);
-}
-
-.teaser-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.75rem;
-}
-
-.teaser-card p {
-  color: var(--text-muted);
-  margin-bottom: 1rem;
-}
-
-.teaser-arrow {
-  color: var(--accent-blue-dark);
-  font-weight: 600;
-}
-
-/* ============================================
-   Footer
-   ============================================ */
-.site-footer {
-  background: var(--bg-alt);
-  border-top: 1px solid var(--border);
-  padding: 2rem 0;
-  text-align: center;
-  color: var(--text-muted);
-  font-size: 0.9rem;
-  margin-top: 4rem;
-}
-
-.site-footer p {
+/* the list of links on the right */
+.nav-links {
+  /* remove the bullet points */
+  list-style: none; 
   margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* each individual link */
+.nav-links a {
+  color: #444;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  /* light blue when hovering */
+  color: #4a8bb0; 
+}
+
+/* add padding (breathing room) around the main content */
+main {
+  padding: 2rem;
 }
