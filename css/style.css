@@ -50,3 +50,61 @@ body {
 main {
   padding: 2rem;
 }
+
+
+
+/* active link in nav (the page you're currently on) */
+.nav-links a.active {
+  color: #4a8bb0;
+}
+
+/* intro section at the top of the page */
+.intro {
+  text-align: center;
+  padding: 4rem 2rem 2rem;
+}
+
+.intro .greeting {
+  color: #8b6f4e; /* warm brown */
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.intro h1 {
+  font-size: 3rem;
+  margin: 0 0 0.5rem;
+}
+
+.intro .title {
+  color: #555;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* about me section */
+.about {
+  /* keep text from stretching too wide on big screens */
+  max-width: 700px; 
+  /* center the section horizontally */
+  margin: 2rem auto; 
+  padding: 0 2rem;
+}
+
+.about h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  /* light blue accent line under the heading */
+  border-bottom: 2px solid #4a8bb0; 
+  padding-bottom: 0.5rem;
+  /* makes the underline only as wide as the text */
+  display: inline-block; 
+}
+
+.about p {
+  font-size: 1.05rem;
+  /* extra space between lines for easier reading */
+  line-height: 1.7; 
+  margin-bottom: 1rem;
+}
