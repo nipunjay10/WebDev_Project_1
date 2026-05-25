@@ -1,0 +1,17 @@
+{
+  "name": "webdev_project_1",
+  "version": "1.0.0",
+  "description": "Personal homepage for CS5610 Web Development",
+  "type": "module",
+  "main": "index.html",
+  "scripts": {
+    "format": "prettier --write .",
+    "lint": "eslint js/"
+  },
+  "author": "Nipun Jayakumar",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^9.0.0",
+    "prettier": "^3.0.0"
+  }
+}
