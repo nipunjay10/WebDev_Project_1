@@ -135,6 +135,57 @@ main {
   color: var(--text);
 }
 
+/* Profile Image */
+.intro-photo {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--accent-blue);
+  margin-bottom: 1.5rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Contact Me Box */
+.contact {
+  max-width: 735px;
+  margin: 3rem auto 5rem;
+  padding: 2rem 2.5rem;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  text-align: left;
+}
+
+.contact h2 {
+  font-size: 1.5rem;
+  margin: 0 0 1.25rem;
+  display: inline-block;
+  border-bottom: 3px solid var(--accent-blue);
+  padding-bottom: 0.4rem;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-link {
+  color: var(--accent-blue-dark);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.contact-link:hover {
+  color: var(--accent-brown);
+  text-decoration: underline;
+}
+
 
 /* -------------------------- */
 /* PAGES */
