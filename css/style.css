@@ -1,16 +1,40 @@
-/* reset some default browser spacing */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  color: #222;
-  background-color: #f9f7f3;
+/* COLOR PALETTE */
+
+:root {
+  --bg: #f9f7f3;            /* off-white background */
+  --bg-card: #ffffff;       /* white for cards */
+  --text: #010101;          /* main text color */
+  --text-muted: #56585c;    /* lighter gray for secondary text */
+  --accent-blue: #54a9d7;   /* light blue */
+  --accent-blue-dark: #044181; /* darker blue */
+  --accent-brown: #8b6f4e;  /* warm brown */
+  --border: #e6e1d8;        /* subtle border color */
 }
 
-/* nav bar */
+
+
+/* MAIN STYLE */
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: var(--text);
+  background-color: var(--bg);
+  line-height: 1.6;
+}
+
+/* wrapper so content doesnt stretch too wide */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/*--------------------------*/
+/* NAV BAR*/
 .navbar {
-  background-color: white;
-  padding: 1rem 2rem;
-  border-bottom: 1px solid #ddd;
+  background-color: var(--bg-card);
+  padding: 1.25rem 2rem;
+  border-bottom: 1px solid var(--border);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,48 +44,49 @@ body {
 .nav-logo {
   font-size: 1.3rem;
   font-weight: bold;
-  color: #222;
+  color: var(--text);
   text-decoration: none;
 }
 
-/* the list of links on the right */
+/* the list of links */
 .nav-links {
-  /* remove the bullet points */
-  list-style: none; 
+  list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
-/* each individual link */
 .nav-links a {
-  color: #444;
+  color: var(--text-muted);
   text-decoration: none;
   font-weight: 500;
+  transition: color 0.2s ease;
 }
 
 .nav-links a:hover {
-  /* light blue when hovering */
-  color: #4a8bb0; 
+  color: var(--accent-blue-dark);
+}
+
+.nav-links a.active {
+  color: var(--accent-blue-dark);
+  border-bottom: 2px solid var(--accent-blue);
+  padding-bottom: 4px;
 }
 
 /* add padding (breathing room) around the main content */
 main {
-  padding: 2rem;
+  padding: 0;
 }
 
-
-
-/* active link in nav (the page you're currently on) */
-.nav-links a.active {
-  color: #4a8bb0;
-}
-
+/*--------------------------*/
+/* HOMEPAGE */
 /* intro section at the top of the page */
 .intro {
   text-align: center;
-  padding: 4rem 2rem 2rem;
+  padding: 5rem 2rem 3rem;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .intro .greeting {
@@ -73,38 +98,309 @@ main {
 }
 
 .intro h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   margin: 0 0 0.5rem;
+  letter-spacing: -0.02em;
 }
 
 .intro .title {
-  color: #555;
+  color: var(--accent-brown);
   font-size: 1.2rem;
   margin: 0;
+  font-weight: 500;
 }
 
+/* ------------------ */
 /* about me section */
 .about {
   /* keep text from stretching too wide on big screens */
-  max-width: 700px; 
+  max-width: 800px; 
   /* center the section horizontally */
-  margin: 2rem auto; 
+  margin: 2rem auto 5rem; 
   padding: 0 2rem;
 }
 
 .about h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
   /* light blue accent line under the heading */
-  border-bottom: 2px solid #4a8bb0; 
+  display: inline-block;
+  border-bottom: 3px solid var(--accent-blue);
   padding-bottom: 0.5rem;
-  /* makes the underline only as wide as the text */
-  display: inline-block; 
 }
 
 .about p {
+  font-size: 1.1rem;
+  margin-bottom: 1.25rem;
+  color: var(--text);
+}
+
+
+/* -------------------------- */
+/* PAGES */
+
+/* intro on each page */
+.page-intro {
+  text-align: center;
+  padding: 4rem 2rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.page-intro h1 {
+  font-size: 2.8rem;
+  margin: 0 0 1rem;
+}
+
+.page-intro p {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* BUCKET LIST PAGE */
+.bucket-list {
+  max-width: 1100px;
+  margin: 2rem auto 5rem;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 490px;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+/* the outer card is the flip scene, no background here */
+.card {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  perspective: 1000px;
+  cursor: pointer;
+  height: 480px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* card-inner is what actually flips */
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease;
+  transform-style: preserve-3d;
+}
+
+/* when card has the flipped class, rotate the inner 180 degrees */
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* both sides share these styles */
+.card-front,
+.card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* front side has padding and is vertically centered */
+.card-front {
+  padding: 1rem 1rem 8rem 1rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+/* back side stacks image on top, content below */
+.card-back {
+  padding: 0;
+  transform: rotateY(180deg);
+  background-color: #f4f1ea;
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: var(--text);
+}
+
+.card-meta {
+  color: var(--accent-brown);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+.card-why {
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* little click to learn more hint on the front */
+.card-hint {
+  color: var(--accent-blue-dark);
+  font-size: 0.85rem;
+  margin-bottom: 0;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* image on the back of the card */
+.card-image {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  display: block;
+}
+
+/* bio and why text on the back */
+.card-back .card-bio,
+.card-back .card-why {
+  padding: 0 1.25rem;
+  margin: 0.75rem 0 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.card-back .card-bio {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.card-back .card-why {
+  color: var(--text-muted);
+  font-style: italic;
+  margin-bottom: 1.25rem;
+}
+
+/* Visited card styling */
+.card.visited .card-front {
+  background-color: #f4f1ea;
+  border-color: var(--accent-brown);
+}
+
+.badge {
+  display: inline-block;
+  background-color: var(--accent-blue);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+  letter-spacing: 0.05em;
+}
+
+/* AI PAGE */
+
+/* Title block at the top of the interests page */
+.title-block {
+  text-align: center;
+  padding: 4rem 2rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.title-block h1 {
+  font-size: 2.8rem;
+  margin: 0 0 1rem;
+}
+
+.title-block .page-intro {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* each interest section */
+.interests-page {
+  max-width: 800px;
+  margin: 0 auto 5rem;
+  padding: 0 2rem;
+}
+
+.interest-section {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.interest-section h2 {
+  font-size: 1.8rem;
+  margin: 0 0 1rem;
+  color: var(--text);
+  display: inline-block;
+  border-bottom: 3px solid var(--accent-blue);
+  padding-bottom: 0.4rem;
+}
+
+.interest-section p {
   font-size: 1.05rem;
-  /* extra space between lines for easier reading */
-  line-height: 1.7; 
-  margin-bottom: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1.1rem;
+  color: var(--text);
+}
+
+
+
+/*--------------------------*/
+/* Filter Buttons for Bucket List */
+.filter-bar {
+  max-width: 1100px;
+  margin: 1rem auto 2rem;
+  padding: 0 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.filter-btn {
+  background-color: var(--bg-card);
+  border: 2px solid var(--border);
+  color: var(--text);
+  padding: 0.55rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  /* pill shaped buttons */
+  border-radius: 999px;
+  /* can turn into poitning hand on hover */
+  cursor: pointer;
+  transition: all 0.2s ease;
+  /* force match*/
+  font-family: inherit;
+}
+
+.filter-btn:hover {
+  border-color: var(--accent-blue);
+  color: var(--accent-blue-dark);
+}
+
+.filter-btn.active {
+  background-color: var(--accent-blue-dark);
+  border-color: var(--accent-blue-dark);
+  color: white;
+}
+
+/* hidden cards */
+.card.hidden {
+  display: none;
 }

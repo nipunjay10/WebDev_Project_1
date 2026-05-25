@@ -1,4 +1,4 @@
-// Global scripts for homepage
-// (Page-specific scripts live in their own files, e.g., bucket-list.js)
+// Global script for homepage
+// Page-specific scripts live in their own files
 
 console.log("Site loaded.");

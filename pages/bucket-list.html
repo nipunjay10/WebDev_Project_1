@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Nipun Jayakumar" />
+    <meta name="description" content="Historical sites I want to visit, by continent." />
+    <title>Bucket List — Nipun Jayakumar</title>
+
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <!-- nav links -->
+    <nav class="navbar">
+      <a href="../index.html" class="nav-logo">Nipun Jayakumar</a>
+      <ul class="nav-links">
+        <li><a href="../index.html">About Me</a></li>
+        <!-- same folder links don't need ../ -->
+        <li><a href="bucket-list.html" class="active">Bucket List</a></li>
+        <li><a href="ai-page.html">Interests (AI)</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <!-- Intro -->
+      <section class="page-intro">
+        <h1>Bucket List</h1>
+        <p>Ancient sites and historic places I want to visit, and some I already have checked off.</p>
+      </section>
+
+      <!-- filter buttons - JS interactivity -->
+      <section class="filter-bar">
+        <button class="filter-btn active" data-continent="all">All</button>
+        <button class="filter-btn" data-continent="Africa">Africa</button>
+        <button class="filter-btn" data-continent="Asia">Asia</button>
+        <button class="filter-btn" data-continent="Europe">Europe</button>
+        <button class="filter-btn" data-continent="Americas">Americas</button>
+      </section>
+
+      <!-- list of sites -->
+      <section class="bucket-list">
+        <!-- Machu Picchu -->
+        <div class="card" data-continent="Americas">
+          <div class="card-inner">
+            <div class="card-front">
+              <h2>Machu Picchu</h2>
+              <p class="card-meta">Peru - Americas</p>
+              <p class="card-hint">Click to learn more</p>
+            </div>
+            <div class="card-back">
+              <img
+                src="../images/machu-picchu.jpg"
+                alt="Machu Picchu ruins in the Andes mountains"
+                class="card-image"
+              />
+              <p class="card-bio">
+                A 15th-century Inca citadel built around 1450 in the Andes mountains of Peru.
+                Abandoned during the Spanish conquest and rediscovered in 1911.
+              </p>
+              <p class="card-why">
+                I want to see how the Incas built an entire city into the mountainside — the
+                architecture alone shows how advanced this civilization was.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Great Pyramid of Giza -->
+        <div class="card" data-continent="Africa">
+          <div class="card-inner">
+            <div class="card-front">
+              <h2>Great Pyramid of Giza</h2>
+              <p class="card-meta">Egypt - Africa</p>
+              <p class="card-hint">Click to learn more</p>
+            </div>
+            <div class="card-back">
+              <img
+                src="../images/giza_pyramid.jpg"
+                alt="The Great Pyramid of Giza in Egypt"
+                class="card-image"
+              />
+              <p class="card-bio">
+                Built around 2560 BCE as a tomb for Pharaoh Khufu. The oldest and largest of
+                the three pyramids of Giza, and the only Wonder of the Ancient World still
+                standing.
+              </p>
+              <p class="card-why">
+                The pyramids fascinate me because of their ancient engineering and massive
+                scale. They are lined up with specific constellations and have wild
+                mathematical proportions that still are not fully explained.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Angkor Wat -->
+        <div class="card" data-continent="Asia">
+          <div class="card-inner">
+            <div class="card-front">
+              <h2>Angkor Wat</h2>
+              <p class="card-meta">Cambodia - Asia</p>
+              <p class="card-hint">Click to learn more</p>
+            </div>
+            <div class="card-back">
+              <img
+                src="../images/ankor_wat.jpg"
+                alt="Angkor Wat temple complex in Cambodia with monks in the foreground"
+                class="card-image"
+              />
+              <p class="card-bio">
+                A massive temple complex in Cambodia built in the early 12th century by the
+                Khmer Empire. Originally dedicated to the Hindu god Vishnu, later converted
+                to a Buddhist site.
+              </p>
+              <p class="card-why">
+                I love the detailed architecture, which is unique to the region. It's one of
+                the largest Hindu temples in the world and the cultural significance is
+                incredible.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chichen Itza -->
+        <div class="card visited" data-continent="Americas">
+          <div class="card-inner">
+            <div class="card-front">
+              <h2>Chichen Itza <span class="badge">Visited ✓</span></h2>
+              <p class="card-meta">Mexico - Americas</p>
+              <p class="card-hint">Click to learn more</p>
+            </div>
+            <div class="card-back">
+              <img
+                src="../images/Chichen_Itza.jpg"
+                alt="El Castillo pyramid at Chichen Itza in Mexico"
+                class="card-image"
+              />
+              <p class="card-bio">
+                A pre-Columbian Mayan city in Yucatan, Mexico, built between the 5th and
+                13th centuries. Famous for the El Castillo pyramid and its acoustic
+                engineering. Clap at the base and you hear the call of a quetzal bird in
+                response.
+              </p>
+              <p class="card-why">
+                I've crossed this one off the list. The Mayan history and the incredible
+                sound design made the visit unforgettable.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Petra -->
+        <div class="card" data-continent="Asia">
+          <div class="card-inner">
+            <div class="card-front">
+              <h2>Petra</h2>
+              <p class="card-meta">Jordan - Asia</p>
+              <p class="card-hint">Click to learn more</p>
+            </div>
+            <div class="card-back">
+              <img
+                src="../images/petra.jpg"
+                alt="The Treasury at Petra carved into rose-red cliffs in Jordan"
+                class="card-image"
+              />
+              <p class="card-bio">
+                An ancient city in southern Jordan carved directly into red sandstone
+                cliffs by the Nabataeans around the 4th century BCE. Lost to the Western
+                world for centuries before being rediscovered in 1812.
+              </p>
+              <p class="card-why">
+                The city carved into the cliffs looks unreal - plus many of my favorite
+                movies were filmed there.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rome -->
+        <div class="card" data-continent="Europe">
+          <div class="card-inner">
+            <div class="card-front">
+              <h2>Rome</h2>
+              <p class="card-meta">Italy · Europe</p>
+              <p class="card-hint">Click to learn more</p>
+            </div>
+            <div class="card-back">
+              <img
+                src="../images/rome.jpg"
+                alt="The Roman Colosseum at dusk in Rome, Italy"
+                class="card-image"
+              />
+              <p class="card-bio">
+                The historical capital of the Roman Empire and seat of Roman civilization
+                for over a thousand years. Home to the Colosseum, Roman Forum, and Pantheon
+                — some of the best-preserved ancient structures in the world.
+              </p>
+              <p class="card-why">
+                I've always wanted to visit because of the mix of ancient history, famous
+                architecture, and historic landmarks. Roman civilization is my favorite.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="../js/bucket-list.js"></script>
+  </body>
+</html>
