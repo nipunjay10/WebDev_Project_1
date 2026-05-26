@@ -6,7 +6,7 @@
   "main": "index.html",
   "scripts": {
     "format": "prettier --write .",
-    "lint": "eslint js/"
+    "lint": "eslint js/" 
   },
   "author": "Nipun Jayakumar",
   "license": "MIT",
