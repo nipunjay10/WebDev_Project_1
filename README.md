@@ -26,6 +26,9 @@ This is my multi-page personal homepage built for CS5610 Web Development at Nort
 This is a pure static HTML/CSS site. Just click on the URL to view it and interact with the site.
 URL: <https://nipunjay10.github.io/WebDev_Project_1/>
 
+DEMO: <https://www.youtube.com/watch?v=Z03BoEdL_ew>
+SLIDES: <https://docs.google.com/presentation/d/1bRmfHa6qyVhE3bBQgxgiCWYLpacGt-TbzB3Zhi_F3O8/edit?usp=sharing>
+
 ## Screenshots
 
 ### About Me
