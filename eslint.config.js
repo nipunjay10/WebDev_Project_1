@@ -13,5 +13,5 @@ export default [
       "no-unused-vars": "warn",
       "no-undef": "error",
     },
-  }, 
+  },
 ];

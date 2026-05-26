@@ -1,4 +1,4 @@
-// BUCKET LIST PAGE JAVASCRIPT 
+// BUCKET LIST PAGE JAVASCRIPT
 
 // when we click a filter, only the cards iwth the matching data type should be visible
 
